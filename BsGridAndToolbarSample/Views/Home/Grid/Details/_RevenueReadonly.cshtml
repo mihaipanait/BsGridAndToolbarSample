@@ -1,0 +1,23 @@
+﻿@using BForms.Html
+@model MyGrid.Models.MovieDetailsModel
+
+<div class="bs-readonly">
+    @if (Model.WeekendRevenue > 0)
+    {
+    <dl>
+        <dt>Weekend Revenue &nbsp;</dt>
+        <dd>@Model.WeekendRevenue Mil$</dd>
+    </dl>
+    }
+    @if (Model.GrossRevenue > 0)
+    {
+    <dl>
+        <dt>Gross Revenue &nbsp;</dt>
+        <dd>@Model.GrossRevenue Mil$</dd>
+    </dl>
+    }
+    <dl>
+        <dt>Release Date &nbsp;</dt>
+        <dd>@String.Format("{0:dd MMMM yyyy}", Model.ReleaseDate.DateValue)</dd>
+    </dl>
+</div>
